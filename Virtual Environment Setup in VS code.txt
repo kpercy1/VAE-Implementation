@@ -1,0 +1,19 @@
+Virtual Environment Setup in VS code
+
+1. Ctrl + Shift + P, then select "Python: Select Interpreter". From here, can create a new virtual environment, venv.
+
+2. Activate the virtual environment from the VS code terminal using the following command:
+. .venv\Scripts\Activate.ps1
+Once this is done, the terminal should say something like (.venv) PS C:\Users\kperc\folder_name
+
+3. Install ipykernel with the following command in VS code terminal:
+pip install ipykernel
+Then run the following command
+& "C:\Users\kperc\VAE\.venv\Scripts\python.exe" -m ipykernel install --user --name=venv --display-name "Python (venv)"
+
+4. Make sure that the Jupyter kernel is connected to the virtual environment as well (this shows in the top right of VS code).
+
+5. Install any required python packages from the VS code terminal. For example, the following commands might be useful:
+pip install torchvision torch
+pip install numpy
+pip install matplotlib
